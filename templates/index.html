@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doodle Classifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .interface {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 300px;
+            width: 100%;
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5%;
+            flex-wrap: wrap;
+        }
+
+        #clrCvs {
+            margin: 10px;
+            padding: 10px 100px;
+        }
+
+        #canvas {
+            border: 1px solid black;  
+            width: 256px;
+            height: 256px;
+        }
+        #barChart {
+            border: 1px solid black;  
+            width:70%;
+            max-width:512px;
+            max-height: 256px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="interface">
+        <div class="main">
+            <canvas width="256" height="256" id="canvas"></canvas>
+            <canvas id="barChart"></canvas>
+        
+        </div>
+        <div class="btn">
+            <button id="clrCvs" onclick="clearCanvas()">Clear</button>
+        </div>
+    </div>
+
+   
+
+
+</body>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+</html>
