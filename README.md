@@ -41,14 +41,16 @@ This web application allows users to draw doodles on a canvas and classify them 
    ```
 
  7. **Open Your Browser**:
-Navigate to `http://localhost:5000` to use the application.
+    
+   Navigate to `http://localhost:5000` to use the application.
 
-8. **Draw and Classify**:
+9. **Draw and Classify**:
 - Use the canvas to draw a doodle.
 - Click the "Clear" button to start over.
 - The app will predict the class of the doodle in real-time and display it in a bar chart.
 
   ## Model Details
 
-   The application uses a CNN model (`animal-doodle-classifier.h5`) for predicting doodle classes. The model was trained using the [Quick, Draw! Dataset](https://github.com/googlecreativelab/quickdraw-dataset) provided by Google.
+   The application uses a CNN model (`animal-doodle-classifier.h5`) for predicting doodle classes.
+  The model was trained using the [Quick, Draw! Dataset](https://github.com/googlecreativelab/quickdraw-dataset) provided by Google.
    The code for training the model is available in the jupyter notebook.
