@@ -23,8 +23,10 @@ This web application allows users to draw doodles on a canvas and classify them 
 
 1. **Clone the Repository**:
    
-   `git clone https://github.com/abhishekmaher6699/doodle-classifier.git
-    cd doodle-classifier`
+   ```
+   git clone https://github.com/abhishekmaher6699/doodle-classifier.git
+   cd doodle-classifier
+   ```
 
 3. **Install Dependencies**:
    
