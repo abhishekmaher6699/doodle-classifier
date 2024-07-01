@@ -6,16 +6,18 @@
     <title>Doodle Classifier</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-
+        /* Reset padding and margin for all elements */
         * {
             padding: 0;
             margin: 0;
         }
 
+        /* Ensure the HTML element takes up the full height */
         html {
             height: 100%;
         }
 
+        /* Set up the body to be flexbox for centering content */
         body {
             height: 100%;
             display: flex;
@@ -23,6 +25,7 @@
             justify-content: center;
         }
 
+        /* Flexbox container for the interface */
         .interface {
             display: flex;
             flex-direction: column;
@@ -32,6 +35,7 @@
             width: 100%;
         }
 
+        /* Flexbox container for main content */
         .main {
             width: 100%;
             display: flex;
@@ -41,45 +45,43 @@
             flex-wrap: wrap;
         }
 
+        /* Style for the clear canvas button */
         #clrCvs {
             margin: 10px;
             padding: 10px 100px;
         }
 
+        /* Style for the drawing canvas */
         #canvas {
-            border: 1px solid black;  
+            border: 1px solid black;
             width: 256px;
             height: 256px;
         }
+
+        /* Style for the bar chart */
         #barChart {
-            border: 1px solid black;  
-            width:70%;
-            max-width:512px;
+            border: 1px solid black;
+            width: 70%;
+            max-width: 512px;
             max-height: 256px;
         }
-
-
     </style>
-
 </head>
 <body>
     <div class="interface">
         <div class="main">
+            <!-- Canvas for drawing -->
             <canvas width="256" height="256" id="canvas"></canvas>
+            <!-- Canvas for the bar chart -->
             <canvas id="barChart"></canvas>
-        
         </div>
         <div class="btn">
+            <!-- Button to clear the canvas -->
             <button id="clrCvs" onclick="clearCanvas()">Clear</button>
         </div>
     </div>
 
-   
-
-
+    <!-- Include the external JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
-
-
-
 </html>
