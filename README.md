@@ -30,16 +30,20 @@ This web application allows users to draw doodles on a canvas and classify them 
 
 3. **Install Dependencies**:
    
-   `pip install -r requirements.txt`
+   ```
+   pip install -r requirements.txt
+   ```
 
-4. **Run the Flask application**:
+5. **Run the Flask application**:
    
-   `python main.py`
+   ```
+   python main.py
+   ```
 
- 5. **Open Your Browser**:
+ 7. **Open Your Browser**:
 Navigate to `http://localhost:5000` to use the application.
 
-6. **Draw and Classify**:
+8. **Draw and Classify**:
 - Use the canvas to draw a doodle.
 - Click the "Clear" button to start over.
 - The app will predict the class of the doodle in real-time and display it in a bar chart.
