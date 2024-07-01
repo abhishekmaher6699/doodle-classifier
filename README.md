@@ -28,7 +28,7 @@ This web application allows users to draw doodles on a canvas and classify them 
 
 3. **Install Dependencies**:
    
-  `pip install -r requirements.txt`
+   `pip install -r requirements.txt`
 
 4. **Run the Flask application**:
    
