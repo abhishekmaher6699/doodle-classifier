@@ -8,7 +8,7 @@ import io
 app = Flask(__name__, static_folder='static')
 
 # Load the pre-trained model
-model = tf.keras.models.load_model("C:/Users/Admin/OneDrive/Desktop/Python/doodle-classifier/model/animal-doodle-classifier.h5")
+model = tf.keras.models.load_model("model/animal-doodle-classifier.h5")
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
