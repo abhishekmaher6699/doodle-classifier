@@ -1,4 +1,3 @@
-// Get the canvas element and its 2D rendering context
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -6,12 +5,10 @@ var ctx = canvas.getContext('2d');
 ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-// Get the clear canvas button element
-var clrCvs = document.getElementById('clrCvs');
-var painting = false;  // A flag to indicate if painting is active
-var paintingTimer = null;  // Timer for sending pixel data
+var clrCvs = document.getElementById('clrCvs'); // clear button
+var painting = false; 
+var paintingTimer = null;  
 
-// Add event listeners for mouse actions on the canvas
 canvas.addEventListener('mousedown', startPainting);
 canvas.addEventListener('mouseup', stopPainting);
 canvas.addEventListener('mousemove', draw);
@@ -19,9 +16,8 @@ canvas.addEventListener('mousemove', draw);
 // Function to start painting
 function startPainting(e) {
     painting = true;
-    draw(e);  // Start drawing immediately
+    draw(e); 
 
-    // Start the timer to send pixel data every second
     if (!paintingTimer) {
         paintingTimer = setInterval(sendPixels, 1000);
     }
@@ -42,7 +38,6 @@ function draw(e) {
     const mouseX = e.pageX - rect.left - window.scrollX;
     const mouseY = e.pageY - rect.top - window.scrollY;
 
-    // Set drawing parameters
     ctx.lineWidth = 2;
     ctx.fillStyle = "white";
     ctx.lineCap = 'round';
@@ -57,20 +52,14 @@ function draw(e) {
     ctx.moveTo(mouseX, mouseY);
 }
 
-// Function to clear the canvas
-function clearCanvas() {
-    // Clear the entire canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Stop the timer for sending pixel data
+function clearCanvas() {
+  
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     clearInterval(paintingTimer);
     paintingTimer = null;
-    
-    // Reset the chart data
     myBarChart.data.datasets[0].data = [0, 0, 0, 0, 0];
     myBarChart.update();
-
-    // Fill the canvas with white color
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
